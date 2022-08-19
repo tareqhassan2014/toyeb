@@ -178,7 +178,7 @@ app.post('/uploads', upload.array('files', 5), async (req, res) => {
         const image = await cloudinary.uploader.upload(path);
 
         urls.push({
-            _id: i + 1,
+            _id: image.public_id,
             file: image.url,
             mimeType: 'image/jpeg',
             fileType: 'image',

@@ -22,7 +22,7 @@ router.get('/list', AuthenticatorJWT, postsList);
 router.get('/get/:id', AuthenticatorJWT, getPostById);
 router.post('/add', upload.array('files', 5), addPost);
 router.patch('/update/:id', updatePost);
-router.patch('/update/:id/likes', updatePostLike);
+router.post('/update/:id/likes', updatePostLike);
 router.patch('/update/:id/comments', updatePostComments);
 router.patch('/update/:id/shares', updatePostShares);
 router.delete('/delete/:id', AuthenticatorJWT, deletePost);
